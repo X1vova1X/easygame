@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Login</title>
+  <title>EasyGame Developer</title>
   <style>
     body {
       font-family: 'Montserrat', sans-serif;
@@ -149,12 +149,7 @@
       const username = document.getElementById('username').value;
       const password = document.getElementById('password').value;
 
-      // Here you would typically check the username and password against a database
-      // or other authentication system. For this example, we'll just use a simple
-      // hardcoded check.
-
       if (username === 'Guy228IsCool' && password === '12322caxapok12332') {
-        // Display the PIN code modal
         pinModal.style.display = 'block';
       } else {
         alert('Invalid username or password. Please try again.');
@@ -163,10 +158,6 @@
 
     pinSubmitButton.addEventListener('click', () => {
       const pinCode = document.getElementById('pin-code').value;
-
-      // Here you would typically check the PIN code against a database or other
-      // authentication system. For this example, we'll just use a simple
-      // hardcoded check.
 
       if (pinCode === '420696') {
         alert('Login successful!');
