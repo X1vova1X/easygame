@@ -1,0 +1,118 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>EasyGame Dashboard</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      margin: 0;
+      padding: 0;
+      position: relative;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    .dashboard {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 20px;
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      position: relative;
+    }
+
+    .dashboard-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-color: #007bff;
+      color: white;
+      padding: 20px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      text-decoration: none;
+    }
+
+    .dashboard-item:hover {
+      background-color: #0056b3;
+    }
+
+    .dashboard-item i {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+
+    .dashboard-item span {
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .right-bottom-frame {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      border: 2px solid #007bff;
+      padding: 10px;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="dashboard">
+      <a href="https://dash.infinityfree.com/accounts/if0_35326950/statistics" class="dashboard-item">
+        <i class="fas fa-chart-line"></i>
+        <span>Analytics</span>
+      </a>
+      <a href="https://dash.infinityfree.com/accounts/if0_35326950/edit" class="dashboard-item">
+        <i class="fas fa-cog"></i>
+        <span>Settings</span>
+      </a>
+      <a href="https://dash.infinityfree.com/accounts/if0_35326950/statistics" class="dashboard-item">
+        <i class="fas fa-users"></i>
+        <span>Users</span>
+      </a>
+      <a href="https://dash.infinityfree.com/accounts/if0_35326950/domains" class="dashboard-item">
+        <i class="fas fa-globe"></i>
+        <span>Domains</span>
+      </a>
+      <a href="https://dash.infinityfree.com/accounts/if0_35326950/redirects" class="dashboard-item">
+        <i class="fas fa-random"></i>
+        <span>Redirects</span>
+      </a>
+      <a href="https://dash.infinityfree.com/accounts/if0_35326950/errorPages" class="dashboard-item">
+        <i class="fas fa-exclamation-triangle"></i>
+        <span>Error Pages</span>
+      </a>
+      <a href="https://dash.infinityfree.com/accounts/if0_35326950/phpConfig" class="dashboard-item">
+        <i class="fas fa-code"></i>
+        <span>PHP Options</span>
+      </a>
+      <a href="https://dash.infinityfree.com/accounts/if0_35326950/ipBlocks" class="dashboard-item">
+        <i class="fas fa-ban"></i>
+        <span>IP Blocks</span>
+      </a>
+      <a href="https://dash.infinityfree.com/accounts/if0_35326950/dnsRecords" class="dashboard-item">
+        <i class="fas fa-network-wired"></i>
+        <span>DNS Records</span>
+      </a>
+    </div>
+    <div class="right-bottom-frame">
+      EasyGame Developer Dashboard
+    </div>
+  </div>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</body>
+</html>
