@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login</title>
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-image: linear-gradient(to right, #4CA1AF, #C4E0E5);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .login-container {
+      background-color: white;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+      max-width: 400px;
+      width: 100%;
+    }
+
+    h2 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 30px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      font-weight: bold;
+      color: #555;
+      margin-bottom: 5px;
+    }
+
+    input[type=text], input[type=password] {
+      width: 100%;
+      padding: 12px 20px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      font-size: 16px;
+    }
+
+    button {
+      background-color: #007bff;
+      color: white;
+      padding: 14px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      width: 100%;
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    .modal-content {
+      background-color: white;
+      margin: 15% auto;
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 300px;
+      text-align: center;
+    }
+
+    #pin-code {
+      width: 100%;
+      padding: 12px 20px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      font-size: 16px;
+    }
+
+    #pin-submit {
+      background-color: #007bff;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    #pin-submit:hover {
+      background-color: #0056b3;
+    }
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="login-container">
+    <h2>Login</h2>
+    <form id="login-form">
+      <div class="form-group">
+        <label for="username">Username:</label>
+        <input type="text" id="username" placeholder="Enter your username" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" id="password" placeholder="Enter your password" required>
+      </div>
+      
+      <button type="submit">Login</button>
+    </form>
+  </div>
+
+  <div id="pin-modal" class="modal">
+    <div class="modal-content">
+      <h2>Enter PIN Code</h2>
+      <input type="text" id="pin-code" placeholder="Enter PIN code" maxlength="6" required>
+      <button id="pin-submit">Confirm</button>
+    </div>
+  </div>
+
+  <script>
+    const form = document.getElementById('login-form');
+    const pinModal = document.getElementById('pin-modal');
+    const pinSubmitButton = document.getElementById('pin-submit');
+
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+
+      const username = document.getElementById('username').value;
+      const password = document.getElementById('password').value;
+
+      // Here you would typically check the username and password against a database
+      // or other authentication system. For this example, we'll just use a simple
+      // hardcoded check.
+
+      if (username === 'Guy228IsCool' && password === '12322caxapok12332') {
+        // Display the PIN code modal
+        pinModal.style.display = 'block';
+      } else {
+        alert('Invalid username or password. Please try again.');
+      }
+    });
+
+    pinSubmitButton.addEventListener('click', () => {
+      const pinCode = document.getElementById('pin-code').value;
+
+      // Here you would typically check the PIN code against a database or other
+      // authentication system. For this example, we'll just use a simple
+      // hardcoded check.
+
+      if (pinCode === '420696') {
+        alert('Login successful!');
+        pinModal.style.display = 'none';
+        window.location.href = "https://dash.infinityfree.com/accounts/if0_35326950/domains?page=4"
+      } else {
+        alert('Invalid PIN code. Please try again.');
+      }
+    });
+  </script>
+</body>
+</html>
